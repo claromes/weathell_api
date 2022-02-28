@@ -14,7 +14,7 @@
   /rain                         RainR                       GET  POST
  !/rain/#RegionId               RainByRegionIdR             GET
   /rain/edit/#RainId            RainByIdR                   PUT  DELETE
- !/rain/getyourumbrella         RainCheckR                  GET
+  /rain/getyourumbrella         RainCheckR                  GET
 
   /humidity                     HumidityR                   GET  POST
  !/humidity/#RegionId           HumidityByRegionIdR         GET
