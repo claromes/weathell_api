@@ -1,0 +1,25 @@
+name: weathell
+version: 0.1.0
+description: Weather API written in Haskell
+
+executable:
+  main: Main.hs
+  source-dirs: src
+  ghc-options:
+  - -Wall
+  - -O3
+  - -threaded
+  - -rtsopts
+  - -with-rtsopts=-N
+
+dependencies:
+- aeson
+- base
+- http-types
+- monad-logger
+- persistent
+- persistent-postgresql
+- text
+- time
+- yesod
+- yaml

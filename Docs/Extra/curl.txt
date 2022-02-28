@@ -1,0 +1,68 @@
+curl -X GET localhost:8080/region -H "accept: application/json"
+
+curl -X GET localhost:8080/region/3 -H "accept: application/json"
+
+curl -X POST localhost:8080/region -d '{"city": "Rio de Janeiro", "state": "RJ", "country": "Brasil", "date": "2022-03-02", "min": 19, "max": 30}' -H "accept: application/json" -H "Content-Type: application/json"
+
+curl -X PATCH localhost:8080/region/3 -d '{"regionMaybeCity": "Iguaba"}' -H "accept: application/json" -H "Content-Type: application/json"
+
+curl -X DELETE localhost:8080/region/4 -H "accept: application/json"
+
+curl -X GET localhost:8080/region/search/Búzios -H "accept: application/json"
+curl -X GET localhost:8080/region/search/São%20Paulo -H "accept: application/json"
+
+curl -X GET localhost:8080/region-conditions/3 -H "accept: application/json"
+
+
+
+
+curl -X GET localhost:8080/source -H "accept: application/json"
+
+curl -X GET localhost:8080/source/3 -H "accept: application/json"
+
+curl -X POST localhost:8080/source -d '{"regionId": 4,"weatherperson": "Claudia", "organization": "USP"}' -H "accept: application/json" -H "Content-Type: application/json"
+
+curl -X PATCH localhost:8080/source/edit/7 -d '{"sourceMaybeWeatherperson": "Rosa"}' -H "accept: application/json" -H "Content-Type: application/json"
+
+curl -X DELETE localhost:8080/source/edit/1 -H "accept: application/json"
+
+
+
+
+curl -X GET localhost:8080/wind -H "accept: application/json"
+
+curl -X GET localhost:8080/wind/1 -H "accept: application/json"
+
+curl -X POST localhost:8080/wind -d '{"regionId": 7,"morning": 10, "afternoon": 10, "evening": 60, "overnight": 12}' -H "accept: application/json" -H "Content-Type: application/json"
+
+curl -X PUT localhost:8080/wind/edit/7 -d '{"regionId": 2,"morning": 40, "afternoon": 15, "evening": 40, "overnight": 6}' -H "accept: application/json" -H "Content-Type: application/json"
+
+curl -X DELETE localhost:8080/wind/edit/2 -H "accept: application/json"
+
+
+
+
+curl -X GET localhost:8080/rain -H "accept: application/json"
+
+curl -X GET localhost:8080/rain/1 -H "accept: application/json"
+
+curl -X POST localhost:8080/rain -d '{"regionId":7, "volume": 5, "probability": 70}' -H "accept: application/json" -H "Content-Type: application/json"
+
+curl -X PUT localhost:8080/rain/edit/1 -d '{"regionId": 3, "volume": 1, "probability": 12}' -H "accept: application/json" -H "Content-Type: application/json"
+
+curl -X DELETE localhost:8080/rain/edit/1 -H "accept: application/json"
+
+curl -X GET localhost:8080/rain/getyourumbrella -H "accept: application/json"
+
+
+
+
+curl -X GET localhost:8080/humidity -H "accept: application/json"
+
+curl -X GET localhost:8080/humidity/3 -H "accept: application/json"
+
+curl -X POST localhost:8080/humidity -d '{"regionId": 3, "min": 10, "max": 20}' -H "accept: application/json" -H "Content-Type: application/json"
+
+curl -X PUT localhost:8080/humidity/edit/1 -d '{"regionId": 3, "min": 5, "max": 9}' -H "accept: application/json" -H "Content-Type: application/json"
+
+curl -X DELETE localhost:8080/humidity/edit/2 -H "accept: application/json"

@@ -1,0 +1,21 @@
+  /region                       RegionR                     GET POST
+ !/region/#RegionId             RegionByIdR                 GET PATCH DELETE
+  /region/search/#Text          SearchRegionByCityR         GET
+  /region-conditions/#RegionId  SearchRegionsR              GET
+
+  /source                       SourceR                     GET POST
+ !/source/#RegionId             SourceByRegionIdR           GET
+  /source/edit/#SourceId        SourceByIdR                 PATCH DELETE
+
+  /wind                         WindR                       GET  POST
+ !/wind/#RegionId               WindByRegionIdR             GET
+  /wind/edit/#WindId            WindByIdR                   PUT  DELETE
+
+  /rain                         RainR                       GET  POST
+ !/rain/#RegionId               RainByRegionIdR             GET
+  /rain/edit/#RainId            RainByIdR                   PUT  DELETE
+ !/rain/getyourumbrella         RainCheckR                  GET
+
+  /humidity                     HumidityR                   GET  POST
+ !/humidity/#RegionId           HumidityByRegionIdR         GET
+  /humidity/edit/#HumidityId    HumidityByIdR               PUT  DELETE

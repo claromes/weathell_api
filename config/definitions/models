@@ -1,0 +1,39 @@
+Region  json
+  city            Text
+  state           Text
+  country         Text
+  date            Day
+  min             Int
+  max             Int
+
+  UniqueRegion date city
+
+Source  json
+  regionId        RegionId
+  weatherperson   Text
+  organization    Text
+
+  UniqueSource regionId
+
+Wind  json
+  regionId        RegionId
+  morning         Int
+  afternoon       Int
+  evening         Int
+  overnight       Int
+
+  UniqueWind regionId
+
+Rain  json
+  regionId        RegionId
+  volume          Int
+  probability     Int
+
+  UniqueRain regionId
+
+Humidity json
+  regionId        RegionId
+  min             Int
+  max             Int
+
+  UniqueHumidity regionId
