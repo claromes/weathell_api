@@ -17,7 +17,7 @@ A API contém informações de previsão do tempo de regiões com condições co
 ## Rotas
 
 ### Região *Region*
-<br>
+<br><br>
 - `` GET`` /region
 <br>
 Retorna todas as regiões com id, cidade, estado, país, data da previsão, temperatura mínima e máxima
